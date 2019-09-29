@@ -12,7 +12,35 @@
 
 </body>
 <script>
-
+  let str = "["
+  var isValid = function (s) {
+    // 长度为奇数，直接返回false
+    if (s.trim().length % 2 !== 0) {
+      return false
+    }
+    let arr = []
+    let map = new Map([
+      [')', '('],
+      ['}', '{'],
+      [']', '[']
+    ])
+    for (let i = 0; i < s.length; i++) {
+      if (map.has(s[i])) {
+        let len = arr.length
+        if (map.get(s[i]) === arr[len - 1]) {
+          // 出栈
+          arr.pop()
+        } else {
+          return false
+        }
+      } else {
+        // 入栈
+        arr.push(s[i])
+      }
+    }
+    return arr.length === 0 ? true : false
+  };
+  console.log(isValid(str))
 </script>
 
 </html>
