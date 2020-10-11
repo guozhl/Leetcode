@@ -1,1 +1,1 @@
-## daily  leetcode 每日一题
+## daily  leetcode
