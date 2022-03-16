@@ -21,4 +21,3 @@ var thirdMax = function (nums) {
   return arr.length > 2 ? arr[2] : arr[0]
 };
 // @lc code=end
-console.log('777777777', thirdMax([3, 2,2, 1,4,7,2,4,5]))
